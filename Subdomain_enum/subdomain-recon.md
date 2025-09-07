@@ -6,8 +6,8 @@
 ## 📌 Introduction  
 **Subdomain enumeration** is the process of identifying and mapping all subdomains associated with a root domain.  
 Examples:  
-- `blog.example.com`  
-- `dev.example.com`  
+- `spudit.huntress.io`  
+- `cpts.huntress.io`  
 
 Each subdomain may host unique applications, services, or environments—potential entry points into an organization’s online presence.  
 
@@ -143,5 +143,6 @@ This comparative analysis highlights the unique strengths of **Subfinder, Assetf
 > 🔐 **Takeaway:** The **combined use** of these tools ensures more complete coverage in penetration testing and bug bounty hunting.
 
 ```
+
 
 

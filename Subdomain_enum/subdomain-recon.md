@@ -142,7 +142,3 @@ This comparative analysis highlights the unique strengths of **Subfinder, Assetf
 
 > 🔐 **Takeaway:** The **combined use** of these tools ensures more complete coverage in penetration testing and bug bounty hunting.
 
-```
-
-
-

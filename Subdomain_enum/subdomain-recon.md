@@ -1,5 +1,3 @@
-
-````markdown
 # Exploration of Subdomain Discovery Tools  
 ### A Comparative Analysis Using Subfinder, Assetfinder, and AlterX  
 
@@ -145,4 +143,5 @@ This comparative analysis highlights the unique strengths of **Subfinder, Assetf
 > 🔐 **Takeaway:** The **combined use** of these tools ensures more complete coverage in penetration testing and bug bounty hunting.
 
 ```
+
 

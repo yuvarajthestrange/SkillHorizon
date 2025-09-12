@@ -1,4 +1,4 @@
-````markdown
+markdown
 # CYBER SECURITY INTERNSHIP  
 ## Assignment 4 – Active Reconnaissance  
 
@@ -217,6 +217,7 @@ nikto -h https://www.zerocopter.com -o nikto.txt
 * **Active\_Recon\_Report.md** → This markdown file (main report).
 
 ---
+
 
 
 

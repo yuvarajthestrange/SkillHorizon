@@ -1,0 +1,34 @@
+- Nikto v2.5.0
+---------------------------------------------------------------------------
++ Multiple IPs found: 172.67.68.29, 104.26.11.5, 104.26.10.5, 2606:4700:83b9:7640:873b:aa1:d8c8:ec91
++ Target IP:          172.67.68.29
++ Target Hostname:    www.zerocopter.com
++ Target Port:        443
+---------------------------------------------------------------------------
++ SSL Info:        Subject:  /CN=zerocopter.com
+                   Ciphers:  TLS_AES_256_GCM_SHA384
+                   Issuer:   /C=US/O=Google Trust Services/CN=WE1
++ Start Time:         2025-09-12 18:38:14 (GMT5.5)
+---------------------------------------------------------------------------
++ Server: cloudflare
++ /: Drupal Link header found with value: <https://www.zerocopter.com/wp-json/>; rel="https://api.w.org/". See: https://www.drupal.org/
++ /: Uncommon header 'server-timing' found, with contents: cfL4;desc="?proto=TCP&rtt=93805&min_rtt=91298&rtt_var=39252&sent=8&recv=7&lost=0&retrans=0&sent_bytes=3921&recv_bytes=1904&delivery_rate=46263&cwnd=253&unsent_bytes=0&cid=c62ff5fd7e4340f2&ts=1198&x=0".
++ /: An alt-svc header was found which is advertising HTTP/3. The endpoint is: ':443'. Nikto cannot test HTTP/3 over QUIC. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/alt-svc
++ /tpncmq5C.: Uncommon header 'x-redirect-by' found, with contents: WordPress.
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ /robots.txt: contains 2 entries which should be manually viewed. See: https://developer.mozilla.org/en-US/docs/Glossary/Robots.txt
++ ERROR: Error limit (20) reached for host, giving up. Last error: opening stream: can't connect: SSL negotiation failed: error:0A000410:SSL routines::ssl/tls alert handshake failure at /var/lib/nikto/plugins/LW2.pm line 5254.
+ at /var/lib/nikto/plugins/LW2.pm line 5254.
+;  at /var/lib/nikto/plugins/LW2.pm line 5254.
++ ERROR: Error limit (20) reached for host, giving up. Last error: opening stream: can't connect: SSL negotiation failed: error:0A000410:SSL routines::ssl/tls alert handshake failure at /var/lib/nikto/plugins/LW2.pm line 5254.
+ at /var/lib/nikto/plugins/LW2.pm line 5254.
+;  at /var/lib/nikto/plugins/LW2.pm line 5254.
++ ERROR: Error limit (20) reached for host, giving up. Last error: 
++ ERROR: Error limit (20) reached for host, giving up. Last error: 
++ /: The Content-Encoding header is set to "deflate" which may mean that the server is vulnerable to the BREACH attack. See: http://breachattack.com/
++ ERROR: Error limit (20) reached for host, giving up. Last error: 
++ Scan terminated: 18 error(s) and 6 item(s) reported on remote host
++ End Time:           2025-09-12 18:52:13 (GMT5.5) (839 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+                    

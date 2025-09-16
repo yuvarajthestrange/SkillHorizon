@@ -28,7 +28,7 @@
   - Title: *Zerocopter – Powered by hackers. Your one-stop shop for your security needs.*  
 
 **Screenshot Placeholder:**  
-`![WhatWeb Scan](images/whatweb.png)`  
+![WhatWeb Scan](images/whatweb.png)
 
 ---
 
@@ -46,8 +46,8 @@
   - `/about-us`, `/articles`, `/contact`, `/faq`, `/blogs`  
 
 **Screenshot Placeholders:**  
-`![Dirb Scan](images/dirb.png)`  
-`![Gobuster Scan](images/gobuster.png)`  
+![Dirb Scan](images/dirb.png)
+![Gobuster Scan](images/gobuster.png) 
 
 ---
 
@@ -60,7 +60,7 @@
   - Errors due to SSL handshake during extended probing  
 
 **Screenshot Placeholder:**  
-`![Nikto Scan](images/nikto.png)`  
+![Nikto Scan](images/nikto.png)
 
 ---
 
@@ -73,7 +73,7 @@
   - Example: `chris-taylor`, `koen-peeters`, `martijn-van-den-berg`, `delia`, `daria-soliieva`, etc.  
 
 **Screenshot Placeholder:**  
-`![Nuclei Scan](images/nuclei.png)`  
+![Nuclei Scan](images/nuclei.png) 
 
 ---
 
@@ -86,7 +86,7 @@
 - **WordPress Detected with Cloudflare & nginx Backend**  
 
 **Screenshot Placeholder:**  
-`![WPScan Results](images/wpscan.png)`  
+![WPScan Results](images/wpscan.png)
 
 ---
 
@@ -120,6 +120,7 @@
 
 ---
 ```
+
 
 
 

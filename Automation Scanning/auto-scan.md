@@ -16,7 +16,7 @@
   - Expiry: **Oct 25, 2025**  
 
 **Screenshot Placeholder:**  
-`![Nmap Aggressive Scan](https://github.com/yuvarajthestrange/SkillHorizon/blob/main/Automation%20Scanning/images/nmap_aggressive.png)`  
+![Nmap Aggressive Scan](images/nmap_aggressive.png)
 
 ---
 
@@ -120,6 +120,7 @@
 
 ---
 ```
+
 
 
 

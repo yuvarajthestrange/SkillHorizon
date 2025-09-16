@@ -110,16 +110,18 @@
 ---
 
 ## Evidence Screenshots
-- images/nmap_aggressive.png
-- `images/whatweb.png`  
-- `images/dirb.png`  
-- `images/gobuster.png`  
-- `images/nikto.png`  
-- `images/nuclei.png`  
-- `images/wpscan.png`  
+
+- [images/nmap_aggressive.png](images/nmap_aggressive.png)  
+- [images/whatweb.png](images/whatweb.png)  
+- [images/dirb.png](images/dirb.png)  
+- [images/gobuster.png](images/gobuster.png)  
+- [images/nikto.png](images/nikto.png)  
+- [images/nuclei.png](images/nuclei.png)  
+- [images/wpscan.png](images/wpscan.png)
 
 ---
 ```
+
 
 
 

@@ -1,4 +1,3 @@
-```markdown
 # CYBER SECURITY INTERNSHIP  
 ## ASSIGNMENT 5 - AUTOMATION SCANNING  
 
@@ -121,4 +120,5 @@
 
 ---
 ```
+
 

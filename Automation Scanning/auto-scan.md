@@ -119,9 +119,6 @@
 - [images/nuclei.png](images/nuclei.png)  
 - [images/wpscan.png](images/wpscan.png)
 
----
-```
-
 
 
 

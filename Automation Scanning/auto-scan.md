@@ -136,7 +136,7 @@
 > **Note:** ZAP's baseline scan prints a long list of rule names with status. In this run many rules were reported as `PASS` — which typically indicates ZAP did not find the specific issue for those checks. It's still important to manually review the full ZAP report for any `WARN` or `FAIL` items (and to verify that `PASS` items are correct and not false-negatives).
 
 **Screenshot Placeholder (ZAP Output):**
-![ZAP Baseline Scan](/mnt/data/39a4a23f-7f24-4640-88bd-52dfd06b0abb.png)
+![ZAP Baseline Scan](images/ZAPscan.png)
 
 ---
 
@@ -172,6 +172,7 @@
 * [images/nikto.png](images/nikto.png)
 * [images/nuclei.png](images/nuclei.png)
 * [images/wpscan.png](images/wpscan.png)
-* ZAP Baseline output (container screenshot): `/mnt/data/39a4a23f-7f24-4640-88bd-52dfd06b0abb.png`
+* [images/ZAPscan.png](images/ZAPscan.png)
 
 ---
+

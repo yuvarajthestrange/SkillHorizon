@@ -38,7 +38,7 @@ The assessment followed a structured methodology to systematically identify vuln
 docker ps --filter "ancestor=sagikazarmark/dvwa" --format "table {{.ID}}\t{{.Image}}\t{{.Ports}}\t{{.Status}}"
 ```
 
-**Example expected output (save to `reports/docker_ps.txt`):**
+**Example expected output:**
 
 ```
 CONTAINER ID   IMAGE                       PORTS                    STATUS
@@ -243,5 +243,6 @@ This vulnerability permits malicious file uploads, such as backdoors.
   * Enforce proper **access controls**.
 
 ---
+
 
 

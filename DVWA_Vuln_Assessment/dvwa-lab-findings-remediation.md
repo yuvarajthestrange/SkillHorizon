@@ -118,6 +118,7 @@ SQL Injection (SQLi) allows an attacker to manipulate SQL queries by injecting m
 
 * **Evidence**:
   ![SQL Injection Evidence](screenshots/sqli.png)
+  ![SQL Injection Evidence](screenshots/sql_injection.png)
   A successful SQL injection was conducted on the "SQL Injection" page with the security level set to medium. By entering the ID `3`, the database returned the corresponding user `Hack Me`. Automated testing with **SQLmap** confirmed the `id` parameter is vulnerable, identifying the backend as **MySQL** with multiple injectable techniques (`Boolean-based blind`, `Error-based`).
 
 * **Impact**:
@@ -242,4 +243,5 @@ This vulnerability permits malicious file uploads, such as backdoors.
   * Enforce proper **access controls**.
 
 ---
+
 

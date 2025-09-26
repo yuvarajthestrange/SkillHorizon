@@ -3,6 +3,7 @@
 *Comprehensive mini research report — repository-ready (Markdown)*
 
 **Author:** Yuvaraj
+
 **Date:** 2025-09-26
 
 ---
@@ -391,6 +392,7 @@ $user = $stmt->fetch();
 * For extra credit: propose a logging/alerting rule (e.g., detect repeated ping requests with shell meta characters) and provide a sample regex.
 
 ---
+
 
 
 

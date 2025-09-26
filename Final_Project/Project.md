@@ -42,7 +42,9 @@ This extended report explains how DVWA implements progressive defenses across it
 ## 2. Overview & intended use
 
 **What is DVWA?** A deliberately insecure PHP/MySQL application for learning web security.
+
 **Intended audience:** Students, instructors, security practitioners.
+
 **Learning objectives:** recognize vulnerabilities, exploit them in a controlled environment, and implement (or propose) secure fixes.
 
 ---
@@ -81,9 +83,18 @@ This extended report explains how DVWA implements progressive defenses across it
 
 1. Set DVWA Security to **Low** (DVWA -> Security).
 2. Navigate to the Command Injection page ("Command Injection" menu).
-3. In the IP field enter a benign value (e.g., `8.8.8.8`) and click "Submit" to observe expected behavior. **Screenshot placeholder:** ![Ping request (low)](screenshots/command_injection_ping.png) 
-4. View source code for analysis. **Screenshot placeholder:** ![Command injection - source code (low)](screenshots/comm_inj_src_code.png)  
-5. Now enter a chaining payload to demonstrate arbitrary command execution, Capture server response, and note any sensitive information printed (avoid real secrets). **Screenshot placeholder:** ![Command injection output](screenshots/comm_inj_low_output.png).
+3. In the IP field enter a benign value (e.g., `8.8.8.8`) and click "Submit" to observe expected behavior.
+
+![Ping request (low)](screenshots/command_injection_ping.png) 
+
+4. View source code for analysis.
+
+![Command injection - source code (low)](screenshots/comm_inj_src_code.png)  
+
+5. Now enter a chaining payload to demonstrate arbitrary command execution, Capture server response, and note any sensitive information printed (avoid real secrets).
+
+
+![Command injection output](screenshots/comm_inj_low_output.png).
 
 **Analysis points to document:** command concatenation pattern, PHP function used (`shell_exec`, `system`, backticks), user privileges of web server process.
 
@@ -101,8 +112,13 @@ This extended report explains how DVWA implements progressive defenses across it
    * Encodings: `%3B` for `;` (e.g., `8.8.8.8%3Bid`)
    * Subshells: `8.8.8.8 $(id)`
    * Backticks: ``8.8.8.8 `id` ``
-3. View source code for analysis. **Screenshot placeholder:** ![Command injection - medium source](screenshots/command_med_src.png)  
-4. Enter payload and exploit vulnerability,Show a successful bypass and capture output. **Screenshot placeholder:** ![Command injection - medium bypass](screenshots/comm_inj_medium_bypass.png)  
+3. View source code for analysis.
+
+![Command injection - medium source](screenshots/command_med_src.png)  
+
+4. Enter payload and exploit vulnerability,Show a successful bypass and capture output.
+
+![Command injection - medium bypass](screenshots/comm_inj_medium_bypass.png)  
 
 ---
 
@@ -114,8 +130,13 @@ This extended report explains how DVWA implements progressive defenses across it
 
 1. Set DVWA Security to **High**.
 2. Enter invalid payloads from previous steps and confirm they are rejected. 
-3. Review server-side code (if available) showing validation using `filter_var($ip, FILTER_VALIDATE_IP)` or use of sockets.  **Screenshot placeholder:** ![Command injection - high source code](screenshots/com_inj_high_src_code.png)  
-4. Demonstrate a safe alternative (example code below) by patching a copy of the vulnerable script and re-testing with malicious payload — it should be rejected. **Screenshot placeholder:** ![Command injection - high bypass](screenshots/com_inj_high_fixed.png)  
+3. Review server-side code (if available) showing validation using `filter_var($ip, FILTER_VALIDATE_IP)` or use of sockets.
+
+![Command injection - high source code](screenshots/com_inj_high_src_code.png)  
+
+5. Demonstrate a safe alternative (example code below) by patching a copy of the vulnerable script and re-testing with malicious payload — it should be rejected.
+
+![Command injection - high bypass](screenshots/com_inj_high_fixed.png)  
 
 **Verification checklist:**
 
@@ -188,9 +209,17 @@ Use this checklist when patching vulnerable code. These steps are ordered from h
 **Steps:**
 
 1. Set DVWA Security to **Low**.
-2. Go to SQL Injection module. **Screenshot placeholder:** ![SQLi - target page (low)](screenshots/sqli_low_target.png)  
-3. View source code for analysis. **Screenshot placeholder:** ![SQLi - source code (low)](screenshots/sqli_low_src_code.png)  
-4. Enter `1 OR 1=1` (or `1' OR '1'='1`) in the input and submit. Capture the result proving unauthorized data disclosure (multiple rows, admin access, etc.). **Screenshot placeholder:**![SQLi - low output (data leak)](screenshots/sqli_low_output.png)  
+2. Go to SQL Injection module.
+
+![SQLi - target page (low)](screenshots/sqli_low_target.png)  
+
+3. View source code for analysis.
+
+![SQLi - source code (low)](screenshots/sqli_low_src_code.png)  
+
+4. Enter `1 OR 1=1` (or `1' OR '1'='1`) in the input and submit. Capture the result proving unauthorized data disclosure (multiple rows, admin access, etc.).
+
+![SQLi - low output (data leak)](screenshots/sqli_low_output.png)  
 
 ---
 
@@ -201,9 +230,17 @@ Use this checklist when patching vulnerable code. These steps are ordered from h
 **Steps:**
 
 1. Set security level to **Medium**.
-2. View target page for analysis functionality.**Screenshot placeholder:** ![SQLi - medium source / constraints](screenshots/sqli_medium_src.png)  
-3. If the input is dropdown-based, intercept the POST using Burp and replace parameter with a crafted payload (e.g., `1 UNION SELECT user, password FROM users`). **Screenshot placeholder:** ![SQLi - medium intercept (Burp)](screenshots/sqli_medium_intercept.png) 
-4. Show successful exploitation where applicable and capture evidence. **Screenshot placeholder:** ![SQLi - medium bypass result](screenshots/sqli_medium_bypass.png)  
+2. View target page for analysis functionality.
+
+![SQLi - medium source / constraints](screenshots/sqli_medium_src.png)  
+
+3. If the input is dropdown-based, intercept the POST using Burp and replace parameter with a crafted payload (e.g., `1 UNION SELECT user, password FROM users`).
+
+![SQLi - medium intercept (Burp)](screenshots/sqli_medium_intercept.png) 
+
+4. Show successful exploitation where applicable and capture evidence.
+
+![SQLi - medium bypass result](screenshots/sqli_medium_bypass.png)  
 
 ---
 
@@ -214,9 +251,17 @@ Use this checklist when patching vulnerable code. These steps are ordered from h
 **Steps:**
 
 1. Set security level to **High**.
-2. View target web for analysis of functionality. **Screenshot placeholder:** ![SQLi - high page (protected)](screenshots/sqli_high_page.png)  
-3. View source page code for analysis. **Screenshot placeholder:** ![SQLi - high source (prepared)](screenshots/sqli_high_src.png)  
-4. Attempt payload and exploit vulnerabilities. **Screenshot placeholder:** ![SQLi - high bypass attempt (failed)](screenshots/sqli_high_bypass.png)  
+2. View target web for analysis of functionality.
+
+![SQLi - high page (protected)](screenshots/sqli_high_page.png)  
+
+3. View source page code for analysis.
+
+![SQLi - high source (prepared)](screenshots/sqli_high_src.png)  
+
+4. Attempt payload and exploit vulnerabilities.
+
+![SQLi - high bypass attempt (failed)](screenshots/sqli_high_bypass.png)  
 
 
 **Verification checklist:** prepared statements used; DB account privileges are limited; error messages are generic.
@@ -346,6 +391,7 @@ $user = $stmt->fetch();
 * For extra credit: propose a logging/alerting rule (e.g., detect repeated ping requests with shell meta characters) and provide a sample regex.
 
 ---
+
 
 
 
